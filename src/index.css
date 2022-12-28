@@ -1,13 +1,13 @@
-/* CSS Custom Properties */
 :root {
   --white: #FFFFFF;
-  --tan-1: #FBF9F6;
+  --tan-1: #FBEAEB;
   --tan-2: #E7E2DD;
   --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
+  --tan-4: #2F3C7E;
   --orange: #F67F00;
   --text-light: #968c84;
   --text-dark: #615954;
+  color: #FBEAEB;
 }
 
 *, *:before, *:after {
@@ -79,6 +79,7 @@ code {
 }
 
 .form-container {
+  margin: 3vmin auto;
   padding: 3vmin;
   background-color: var(--tan-1);
   border: .1vmin solid var(--tan-3);
@@ -103,7 +104,7 @@ label {
   align-items: center;
 }
 
-input {
+input, textarea {
   padding: 1vmin;
   font-size: 2vmin;
   border: .1vmin solid var(--tan-3);
@@ -113,7 +114,12 @@ input {
   outline: none;
 }
 
-input:focus {
+textarea{
+  width: 90vmin;
+  margin: 10px auto;
+}
+
+input:focus, textarea:focus {
   border-color: var(--orange);
 }
 
@@ -135,6 +141,10 @@ button, a.button {
 button.btn-sm {
   font-size: 1.5vmin;
   padding: .6vmin .8vmin;
+}
+
+button:hover{
+  background-color: #a25502;
 }
 
 button.btn-xs {
