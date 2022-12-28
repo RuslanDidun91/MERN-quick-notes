@@ -2,10 +2,14 @@ import sendRequest from "./send-request";
 const BASE_URL = '/api/notes';
 
 //user stories
-export async function addNote(notes) {
-  return await sendRequest(`${BASE_URL}/new`, 'POST', notes);
+export function addNote(notes) {
+  return sendRequest(`${BASE_URL}/new`, 'POST', notes);
 }
 
-export async function getAll() {
-  return await sendRequest(BASE_URL);
+export function getAll() {
+  return sendRequest(BASE_URL);
+}
+
+export function deleteNote(_id) {
+  return sendRequest(`${BASE_URL}/${_id}`, 'DELETE');
 }
